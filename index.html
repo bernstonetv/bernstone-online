@@ -4,77 +4,85 @@
   <meta charset="UTF-8">
   <title>BernStone Online</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #eee;
-      margin: 0;
-      padding: 0;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #eee;
+    margin: 0;
+    padding: 0;
+  }
 
-    header {
-      background-color: #222;
-      padding: 20px;
-      text-align: center;
-      font-size: 2.5em;
-      font-weight: bold;
-      color: #00ffff;
-      border-bottom: 3px solid #444;
-    }
+  header {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #00ffff;
+    border-bottom: 3px solid #444;
+  }
 
-    .twitch-container {
-      text-align: center;
-      margin: 20px 0;
-    }
+  .twitch-container {
+    text-align: center;
+    margin: 20px 0;
+  }
 
-    .content {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      padding: 20px;
-      flex-wrap: wrap;
-    }
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
 
-    .column {
-      background-color: #1e1e1e;
-      border: 1px solid #333;
-      border-radius: 10px;
-      padding: 20px;
-      margin: 10px;
-      width: 45%;
-      max-height: 80vh;
-      overflow-y: auto;
-    }
+  .column {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 45%;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
 
-    h2 {
-      color: #00ffff;
-      border-bottom: 2px solid #333;
-      padding-bottom: 10px;
-    }
+  h2 {
+    color: #00ffff;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+  }
 
-    h3 {
-      color: #ffcc00;
-      margin-top: 20px;
-    }
+  h3 {
+    color: #ffcc00;
+    margin-top: 20px;
+  }
 
-    pre {
-      white-space: pre-wrap;
-      word-wrap: break-word;
-    }
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
 
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 
-    ::-webkit-scrollbar-thumb {
-      background: #555;
-      border-radius: 10px;
-    }
+  ::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+  }
 
-    ::-webkit-scrollbar-track {
-      background: #222;
-    }
-  </style>
+  ::-webkit-scrollbar-track {
+    background: #222;
+  }
+
+  /* ✅ Added this */
+  .cmd {
+    color: #00ffff;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+</style>
+
 </head>
 <body>
 
@@ -99,145 +107,236 @@
 <div class="content">
   <div class="column">
     <h2>🎣 Fishing Game Commands</h2>
-    <pre>
+<pre>
+🎣 FISHING GAME COMMANDS
 Goal: Fish, earn BernCoins, level up, and complete your fishing collection!
 
 🏆 Fishing & Progression
-!fish – Catch a fish! Cooldown: 1 min.
-!fishlevel / !flvl – Your level, XP, biggest catch, titles.
-!fishcheck / !fc – Collection progress.
-!fishtimeleft / !ftl – Event time remaining.
-!nexttitle / !nt – Progress to next title.
-!uniques – Uncaught Unique Fish list.
+<span class="cmd">!fish</span> → Catch a fish! Earn points, BernCoins, and XP. Cooldown: 1 min.
+> Higher levels catch more fish per cast (max 5 at Lvl 100+).
+> Rarer fish = more rewards.
+
+<span class="cmd">!fishlevel</span> / <span class="cmd">!flvl</span>
+> Shows level, XP, total fish caught, biggest fish, and earned titles.
+
+<span class="cmd">!fishcheck</span> / <span class="cmd">!fc</span>
+> View your caught fish vs total available.
+
+<span class="cmd">!fishtimeleft</span> / <span class="cmd">!ftl</span>
+> Shows how much time is left in the fishing event.
+
+<span class="cmd">!nexttitle</span> / <span class="cmd">!nt</span>
+> How far you are from your next title rank.
+
+<span class="cmd">!uniques</span>
+> List of all remaining Uncaught Unique Fish.
 
 🎣 Bait & Boosts
-!buybait / !bb – Buy baits (0.1% points). Boosts next 10 !fish.
-!givebait / !gib – Gift bait to another user.
-!remainingbait / !rb – Check active bait uses.
+<span class="cmd">!buybait</span> / <span class="cmd">!bb</span>
+> Spend 0.1% of total points for 10 baited casts.
+> Baits increase rare fish chance. Can stack.
 
-💰 Currency & Leaderboard
-!berncoins / !bc – BernCoins balance.
-!topfish / !tf – Top 10 by level.
-!biggestfish / !bf – Top 10 biggest fish.
-!topfishcaught / !tfc – Most fish caught.
-!topfishweight / !tfw – Total weight caught.
-!topbc / !tbc – Top BernCoin holders.
+<span class="cmd">!givebait</span> / <span class="cmd">!gib</span> (user)
+> Send bait to another user (costs 0.1% of your points).
+
+<span class="cmd">!remainingbait</span> / <span class="cmd">!rb</span>
+> Check how many baited casts you have left.
+
+💰 Currency & Leaderboards
+<span class="cmd">!berncoins</span> / <span class="cmd">!bc</span>
+> View your BernCoins balance (during events only).
+
+<span class="cmd">!topfish</span> / <span class="cmd">!tf</span>
+> Top 10 by level.
+
+<span class="cmd">!biggestfish</span> / <span class="cmd">!bf</span>
+> Largest fish caught (by weight, first caught wins tie).
+
+<span class="cmd">!topfishcaught</span> / <span class="cmd">!tfc</span>
+> Ranked by number of fish caught.
+
+<span class="cmd">!topfishweight</span> / <span class="cmd">!tfw</span>
+> Ranked by total weight of fish caught.
+
+<span class="cmd">!topbc</span> / <span class="cmd">!tbc</span>
+> Top 10 by BernCoin holdings.
 
 🧺 Net Casting
-!castnet / !cn – 5–15 fish instantly. (15 min cd)
+<span class="cmd">!castnet</span> / <span class="cmd">!cn</span>
+> Cast a net to catch 5–15 fish. Cooldown: 15 min.
+> XP only — no BernCoins. Can be boosted by bait.
+> Only usable during fishing events.
 
 🏹 Bounty System
-!bounty – Catch the target fish for 50x XP/Coins.
+<span class="cmd">!bounty</span>
+> Check the current bounty fish.
+> Catch it for 50× XP and BernCoin bonus (manual fishing only).
+> A new bounty spawns when the last one is caught.
 
-📜 Special Achievements
-!claimrare → All Rare fish = 1 pack.
-!claimepic → All Epic fish = 2 packs.
-!claimlegendary → All Legendary = 3 packs.
-!claimmythic → All Mythic = 4 packs.
-!claimlvl → 1 pack every 25 levels.
+📜 Achievements & Claims
+<span class="cmd">!claimrare</span>, <span class="cmd">!claimepic</span>, <span class="cmd">!claimlegendary</span>, <span class="cmd">!claimmythic</span>, <span class="cmd">!claimlvl</span>
 
-🏅 Titles System – Check with !flvl
-🎣 Angler Titles – Based on fish caught
-⚖️ Hauler Titles – Based on weight
-🧠 Collector Titles – Based on rarity sets
+🏅 Titles System
+Use <span class="cmd">!flvl</span> to check your earned titles.
+🎣 Angler Titles (Total Fish Caught)
+⚖️ Hauler Titles (Total Weight Caught)
+🧠 Collector Titles (Completed Fish Rarities)
 
 🌊 Currents System
-Use !currents to check active effects.
-Stormy Waters – Easier commons
-Full Moon – Higher Mythic chance
-Double XP – 2× XP
-School of Fish – 3× fish
-Golden Tide – 2× Coins
-Red Moon – More Uniques
-Rushing Current – Halved cooldowns
-Cyclone Eye – Randomized rewards
-Bounty Frenzy – 100x bounty rewards
+<span class="cmd">!currents</span> → Shows current active sea currents.
 
 🪝 Rods & Gear
-!buygear / !bg – Reduce !fish cooldown (to 20s)
-!buyrod <rarity> – Boost catch chance (10 casts)
-!rodcheck / !rc – View rod status
+<span class="cmd">!buygear</span> / <span class="cmd">!bg</span>
+<span class="cmd">!geartime</span> / <span class="cmd">!gt</span>
+<span class="cmd">!buyrod</span> <rarity> / <span class="cmd">!br</span>
+<span class="cmd">!rodcheck</span> / <span class="cmd">!rc</span>
 
 💱 BernCoin Conversion
-!cbc <amount> – Convert BC into points (1 BC = 1%)
+<span class="cmd">!cbc</span> <amount> or <span class="cmd">!cbc all</span>
 
 🧱 Milestone Rewards
-!claimmilestone <rarity> – Scale-up BernCoins by catch count.
-!milestoneprogress – View milestone progress.
+<span class="cmd">!claimmilestone</span> <rarity> or <span class="cmd">/cm</span> <rarity>
+<span class="cmd">!milestoneprogress</span> or <span class="cmd">/mp</span>
 
 🛥️ Boat System
-!buyboat <rarity> – Auto-fish while AFK
-Mythic = every 1m, Legendary = 3m, Epic = 5m
-Use !boattime / !bt to view time remaining
+<span class="cmd">!buyboat</span> <rarity>
+<span class="cmd">!boattime</span> / <span class="cmd">!bt</span>
 
 🎯 Hidden Reel Fish
-!reel <1-30> – Guess the number to catch it. (15s cd)
-100x XP + 10x Coins if guessed correctly.
-    </pre>
+<span class="cmd">!reel</span> (1–30)
+</pre>
+
+
   </div>
 
   <div class="column">
     <h2>⛏️ Mining Game Commands</h2>
     <pre>
-Collect stones, synth gems, climb leaderboards!
+💎 Gem Mining Game Guide
+Welcome to the Gem Mining Game! Collect stones, create powerful gems, and climb the leaderboard! 🪨✨
 
 🪓 Basic Commands
-!mine – Get stones. (1m cd, 30s w/ gloves)
-!dynamyte – Blast 20 frags. (5m cd)
-!bag / !frags – Check stone inventory
-!synth – Combine 8–12 stones into a gem
+<span class="cmd">!mine</span>
+> Mine a random stone (1-minute cooldown).
+> Can be reduced to 30s with gloves.
+> Max bag size: 300 stones (upgradeable to 500).
+
+<span class="cmd">!dynamyte</span>
+> Blast up to 20 random fragments instantly (5-minute cooldown).
+> Costs 0.3% of total points.
+
+<span class="cmd">!bag</span> / <span class="cmd">!frags</span>
+> Shows how many and which stones are in your bag.
+
+<span class="cmd">!synth</span>
+> Combine 8–12 stones into a gem with a procedurally generated name and purity.
+> The more similar stones used = higher purity!
 
 💎 Gem Management
-!gems – View all your gems
-!inspect <gem> – Show gem composition
-!dismantle <gem> – Break gem for stones
-!sellgem / !sg <gem> – Sell gem (up to 10% of total pts)
+<span class="cmd">!gems</span>
+> View your entire gem inventory.
+
+<span class="cmd">!inspect</span> <gem>
+> Shows stones used to create your gem.
+> Example: <span class="cmd">!inspect Crystalite</span>
+> You can inspect others too: <span class="cmd">!inspect @user Crystalite</span>
+
+<span class="cmd">!dismantle</span> <gem>
+> Break a gem down and reclaim some of its original stones.
+
+<span class="cmd">!sellgem</span> <gem> or <span class="cmd">!sg</span> <gem>
+> Sell your gem for points.
+> Payout is exponential based on purity.
+> 100% purity = 10% of total points in the system.
 
 🔁 Fusion & Refining
-!fusegem / !fg – Merge 2 gems (1m cd)
-!refine <gem> <frag> – Boost purity (60s cd)
-!editgem <gem> – Randomly change frag makeup (15s cd)
+<span class="cmd">!fusegem</span> <gem1> <gem2> or <span class="cmd">!fg</span>
+> Combine 2 gems into a new fused gem.
+> Purity averages with bonus for overlapping stones.
+> Only similar gems will create strong results.
+> Cooldown: 60s
 
-🎓 Specialization
-!specs – Check frag mastery (XP = better purity)
+<span class="cmd">!refine</span> <gem> <frag>
+> Try to increase a gem’s purity using a frag.
+> Matching stone = higher success chance.
+> Success: +0.1% to +1.5%
+> Failure: -0.1% to -1%
+> Cooldown: 60s
+
+<span class="cmd">!editgem</span> <gem name>
+> Randomly modifies a gem’s fragments.
+> Actions: add, remove, or replace a fragment.
+> Uses frags from your bag (add/replace).
+> Costs 0.05% of total points.
+> Cooldown: 15s
+
+🎓 Stone Specialization
+<span class="cmd">!specs</span> or <span class="cmd">!specs @user</span>
+> See your frag mastery levels.
+> Synthesizing with a stone levels it up.
+> Higher levels = more purity when used.
 
 ⛏️ Gear & Upgrades
-!buyaxe – +10 boosted mines
-!buyglove – Halve mine cd to 30s
-!buybag – +10 frag slots
-!buygembag – +1 gem slot
-!buysynth – Reduce !synth cd to 30s
-!buyref – Reduce !refine cd to 30s
-!minebuff – Check all gear/boosts
+<span class="cmd">!buyaxe</span>
+🪓 Get 10 boosted mines (2–5 stones each).
+> Cost: 0.1% of total system points.
+> Re-buying adds +10 more charges.
+
+<span class="cmd">!buyglove</span> / <span class="cmd">!buygloves</span>
+🧤 Reduces <span class="cmd">!mine</span> cooldown to 30s for 5 minutes.
+> Re-buying extends the timer.
+> Cost: 0.1% of total points.
+
+<span class="cmd">!buybag</span>
+> Expands fragment bag by +10 slots.
+> Cost: 0.5% of total points.
+
+<span class="cmd">!buygembag</span>
+> Expands gem storage by +1 slot.
+> Cost: 0.5% of total points.
+
+<span class="cmd">!buysynth</span>
+> Reduces <span class="cmd">!synth</span> cooldown to 30 seconds for 5 minutes.
+> Cost: 0.1% of total system points.
+
+<span class="cmd">!buyref</span> / <span class="cmd">!buyrefiner</span>
+> Reduces <span class="cmd">!refine</span> cooldown to 30 seconds for 5 minutes.
+> Cost: 0.1% of total system points.
+
+<span class="cmd">!minebuff</span>
+> Shows your pickaxe uses, glove time remaining, and miner status.
 
 🤖 Auto Miners
-!buyminer1 / 3 / 5 / 7 / 9 – Auto-miners
-Generate stones passively for 1 hour
-Each tier = more stones/min
+Buy automated miners that generate stones passively every 60s for 1 hour!
+
+<span class="cmd">!buyminer1</span> / <span class="cmd">!buyminer3</span> / <span class="cmd">!buyminer5</span> / <span class="cmd">!buyminer7</span> / <span class="cmd">!buyminer9</span>
+> Auto-mines 1–9 stones per tick.
+> You cannot buy a new tier if one is active.
+> Buying same tier again extends the timer.
+> Cost ranges from 0.2% – 1.0% of total points.
 
 🏆 Leaderboards
-!topgems – Highest purity gems
-!topsynth – Best synths
-!toprefine – Top refiners
-!topfuse – Best fusions
-!ta <achievement> – Top 10 by title
-!toptraders / !tt – Most gem sales
+<span class="cmd">!topgems</span>, <span class="cmd">!topsynth</span>, <span class="cmd">!toprefine</span>, <span class="cmd">!topfuse</span>, <span class="cmd">!ta</span> <achievement>, <span class="cmd">!toptraders</span>
 
-🧠 Tips
-• Repeating stones = more purity
-• Master stones with !synth
-• Fusing similar gems is powerful
-• Use !inspect before refining
-• Miners + gloves = idle efficiency
+🧠 Strategy Tips
+• Repeating stones in <span class="cmd">!synth</span> increases purity.
+• Level up your stone mastery for long-term purity boosts.
+• Use <span class="cmd">!inspect</span> to pick optimal refining stones.
+• Fusing similar gems = stronger results.
+• Miners + pickaxe + gloves = max idle gain.
+• Only 1 miner can be active at a time — extend it, don’t replace!
 
-✨ New: Gem Infusion (!usegem / !ug)
-Sacrifice 80%+ purity gem → Boost XP of used frags
-XP = purity × 1.5 — 5 min cd
+✨ Gem Infusion
+<span class="cmd">!usegem</span> / <span class="cmd">!ug</span> <gem>
+> Consume high-purity gem for XP.
+> XP = purity × 1.5 to each frag used. CD: 5m.
 
-⚡ New: Gem Charging (!chargegem / !cg)
-Use 100+ frags to boost gem purity
-Matching frags = +3.3% purity (chance to destroy gem!)
+⚡ Gem Charging
+<span class="cmd">!chargegem</span> / <span class="cmd">!cg</span> <gem>
+> Uses 100+ frags to try to boost purity.
+> Match = +3.3/gem size %. Fail = gem destroyed. CD: 1m
     </pre>
+
   </div>
 </div>
 
