@@ -383,36 +383,36 @@ Use <span class="cmd">!boattime</span> or <span class="cmd">!bt</span> to check 
     <h2>⛏️ Mining Game Commands</h2>
     <pre>
 💎 Gem Mining Game Guide
-Welcome to the Gem Mining Game! Collect stones, create powerful gems, and climb the leaderboard! 🪨✨
+Welcome to the Gem Mining Game! Collect frags, create powerful gems, and climb the leaderboard! 🪨✨
 
 🪓 Basic Commands
 <span class="cmd">!mine</span>
-> Mine a random stone (1-minute cooldown).
+> Mine a random frag (1-minute cooldown).
 > Can be reduced to 30s with gloves.
-> Max bag size: 300 stones (upgradeable to 500).
+> Max bag size: 300 frags (upgradeable to 500).
 
 <span class="cmd">!dynamyte</span>
 > Blast up to 20 random fragments instantly (5-minute cooldown).
 > Costs 0.3% of total points.
 
 <span class="cmd">!bag</span> / <span class="cmd">!frags</span>
-> Shows how many and which stones are in your bag.
+> Shows how many and which frags are in your bag.
 
 <span class="cmd">!synth</span>
-> Combine 8–12 stones into a gem with a procedurally generated name and purity.
-> The more similar stones used = higher purity!
+> Combine 8–12 frags into a gem with a procedurally generated name and purity.
+> The more similar frags used = higher purity!
 
 💎 Gem Management
 <span class="cmd">!gems</span>
 > View your entire gem inventory.
 
 <span class="cmd">!inspect</span> <gem>
-> Shows stones used to create your gem.
+> Shows frags used to create your gem.
 > Example: <span class="cmd">!inspect Alruziium</span>
 > You can inspect others too: <span class="cmd">!inspect @user Alruziium</span>
 
 <span class="cmd">!dismantle</span> <gem>
-> Break a gem down and reclaim some of its original stones.
+> Break a gem down and reclaim some of its original frags.
 > Example: <span class="cmd">!dismantle Alruziium</span>
 
 <span class="cmd">!sellgem</span> <gem> or <span class="cmd">!sg</span> <gem>
@@ -424,14 +424,14 @@ Welcome to the Gem Mining Game! Collect stones, create powerful gems, and climb 
 <span class="cmd">!fusegem</span> <gem1> <gem2> or <span class="cmd">!fg</span>
 > Combine 2 gems into a new fused gem.
 > Example: <span class="cmd">!fusegem Alruziium Cizigaar</span>
-> Purity averages with bonus for overlapping stones.
+> Purity averages with bonus for overlapping frags.
 > Only similar gems will create strong results.
 > Cooldown: 60s
 
 <span class="cmd">!refine</span> <gem> <frag>
 > Try to increase a gem’s purity using a frag.
 > Example: <span class="cmd">!refine Alruziium Zircon</span>
-> Matching stone = higher success chance.
+> Matching frags = higher success chance.
 > Success: +0.1% to +1.5%
 > Failure: -0.1% to -1%
 > Cooldown: 60s
@@ -457,15 +457,15 @@ Welcome to the Gem Mining Game! Collect stones, create powerful gems, and climb 
 > Match = +3.3/gem size %. Fail = gem destroyed.
 > Cooldown: 1m
 
-🎓 Stone Specialization
+🎓 Frag Specialization
 <span class="cmd">!specs</span> or <span class="cmd">!specs @user</span>
 > See your frag mastery levels.
-> Synthesizing with a stone levels it up.
+> Synthesizing with a frag levels it up.
 > Higher levels = more purity when used.
 
 ⛏️ Gear & Upgrades
 <span class="cmd">!buyaxe</span>
-🪓 Get 10 boosted mines (2–5 stones each).
+🪓 Get 10 boosted mines (2–5 frags each).
 > Cost: 0.1% of total system points.
 > Re-buying adds +10 more charges.
 
@@ -494,21 +494,27 @@ Welcome to the Gem Mining Game! Collect stones, create powerful gems, and climb 
 > Shows your pickaxe uses, glove time remaining, and miner status.
 
 🤖 Auto Miners
-Buy automated miners that generate stones passively every 60s for 1 hour!
+Buy automated miners that generate frags passively every 60s for 1 hour!
 
 <span class="cmd">!buyminer1</span> / <span class="cmd">!buyminer3</span> / <span class="cmd">!buyminer5</span> / <span class="cmd">!buyminer7</span> / <span class="cmd">!buyminer9</span>
-> Auto-mines 1–9 stones per tick.
+> Auto-mines 1–9 frags per tick.
 > You cannot buy a new tier if one is active.
 > Buying same tier again extends the timer.
 > Cost ranges from 0.2% – 1.0% of total points.
 
-🏆 Leaderboards
-<span class="cmd">!topgems</span>, <span class="cmd">!topsynth</span>, <span class="cmd">!toprefine</span>, <span class="cmd">!topfuse</span>, <span class="cmd">!ta</span> <achievement>, <span class="cmd">!toptraders</span>
+🏆 Leaderboards  
+<span class="cmd">!topsynth</span> – Top gems made with <span class="cmd">!synth</span>  
+<span class="cmd">!toprefine</span> – Top gems improved with <span class="cmd">!refine</span>  
+<span class="cmd">!topfuse</span> – Top gems created with <span class="cmd">!fusegem</span>  
+<span class="cmd">!topcharge</span> – Top gems boosted using <span class="cmd">!chargegem</span>  
+<span class="cmd">!ta</span> &lt;achievement&gt; – Top 10 users for any achievement (e.g. <span class="cmd">!ta Gemsmith</span>)  
+<span class="cmd">!ta all</span> – Top users per achievement category  
+<span class="cmd">!toptraders</span> / <span class="cmd">!tt</span> – Top users by total gem sales
 
 🧠 Strategy Tips
-• Repeating stones in <span class="cmd">!synth</span> increases purity.
-• Level up your stone mastery for long-term purity boosts.
-• Use <span class="cmd">!inspect</span> to pick optimal refining stones.
+• Repeating frags in <span class="cmd">!synth</span> increases purity.
+• Level up your frags mastery for long-term purity boosts.
+• Use <span class="cmd">!inspect</span> to pick optimal refining frags.
 • Fusing similar gems = stronger results.
 • Miners + pickaxe + gloves = max idle gain.
 • Only 1 miner can be active at a time — extend it, don’t replace!
