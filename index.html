@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BernStone Online</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #eee;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #00ffff;
+      border-bottom: 3px solid #444;
+    }
+
+    .twitch-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .column {
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 10px;
+      width: 45%;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+
+    h2 {
+      color: #00ffff;
+      border-bottom: 2px solid #333;
+      padding-bottom: 10px;
+    }
+
+    h3 {
+      color: #ffcc00;
+      margin-top: 20px;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #555;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #222;
+    }
+  </style>
+</head>
+<body>
+
+<header>BernStone Online</header>
+
+<div class="twitch-container">
+    <div id="twitch-embed"></div>
+</div>
+
+<!-- Load Twitch Embed Script -->
+<script src="https://embed.twitch.tv/embed/v1.js"></script>
+<script type="text/javascript">
+    new Twitch.Embed("twitch-embed", {
+        width: "100%",
+        height: 1080,
+        channel: "bernstone",
+        parent: ["yourwebsite.com"] // Replace with your actual domain name (no http://)
+    });
+</script>
+
+
+<div class="content">
+  <div class="column">
+    <h2>🎣 Fishing Game Commands</h2>
+    <pre>
+Goal: Fish, earn BernCoins, level up, and complete your fishing collection!
+
+🏆 Fishing & Progression
+!fish – Catch a fish! Cooldown: 1 min.
+!fishlevel / !flvl – Your level, XP, biggest catch, titles.
+!fishcheck / !fc – Collection progress.
+!fishtimeleft / !ftl – Event time remaining.
+!nexttitle / !nt – Progress to next title.
+!uniques – Uncaught Unique Fish list.
+
+🎣 Bait & Boosts
+!buybait / !bb – Buy baits (0.1% points). Boosts next 10 !fish.
+!givebait / !gib – Gift bait to another user.
+!remainingbait / !rb – Check active bait uses.
+
+💰 Currency & Leaderboard
+!berncoins / !bc – BernCoins balance.
+!topfish / !tf – Top 10 by level.
+!biggestfish / !bf – Top 10 biggest fish.
+!topfishcaught / !tfc – Most fish caught.
+!topfishweight / !tfw – Total weight caught.
+!topbc / !tbc – Top BernCoin holders.
+
+🧺 Net Casting
+!castnet / !cn – 5–15 fish instantly. (15 min cd)
+
+🏹 Bounty System
+!bounty – Catch the target fish for 50x XP/Coins.
+
+📜 Special Achievements
+!claimrare → All Rare fish = 1 pack.
+!claimepic → All Epic fish = 2 packs.
+!claimlegendary → All Legendary = 3 packs.
+!claimmythic → All Mythic = 4 packs.
+!claimlvl → 1 pack every 25 levels.
+
+🏅 Titles System – Check with !flvl
+🎣 Angler Titles – Based on fish caught
+⚖️ Hauler Titles – Based on weight
+🧠 Collector Titles – Based on rarity sets
+
+🌊 Currents System
+Use !currents to check active effects.
+Stormy Waters – Easier commons
+Full Moon – Higher Mythic chance
+Double XP – 2× XP
+School of Fish – 3× fish
+Golden Tide – 2× Coins
+Red Moon – More Uniques
+Rushing Current – Halved cooldowns
+Cyclone Eye – Randomized rewards
+Bounty Frenzy – 100x bounty rewards
+
+🪝 Rods & Gear
+!buygear / !bg – Reduce !fish cooldown (to 20s)
+!buyrod <rarity> – Boost catch chance (10 casts)
+!rodcheck / !rc – View rod status
+
+💱 BernCoin Conversion
+!cbc <amount> – Convert BC into points (1 BC = 1%)
+
+🧱 Milestone Rewards
+!claimmilestone <rarity> – Scale-up BernCoins by catch count.
+!milestoneprogress – View milestone progress.
+
+🛥️ Boat System
+!buyboat <rarity> – Auto-fish while AFK
+Mythic = every 1m, Legendary = 3m, Epic = 5m
+Use !boattime / !bt to view time remaining
+
+🎯 Hidden Reel Fish
+!reel <1-30> – Guess the number to catch it. (15s cd)
+100x XP + 10x Coins if guessed correctly.
+    </pre>
+  </div>
+
+  <div class="column">
+    <h2>⛏️ Mining Game Commands</h2>
+    <pre>
+Collect stones, synth gems, climb leaderboards!
+
+🪓 Basic Commands
+!mine – Get stones. (1m cd, 30s w/ gloves)
+!dynamyte – Blast 20 frags. (5m cd)
+!bag / !frags – Check stone inventory
+!synth – Combine 8–12 stones into a gem
+
+💎 Gem Management
+!gems – View all your gems
+!inspect <gem> – Show gem composition
+!dismantle <gem> – Break gem for stones
+!sellgem / !sg <gem> – Sell gem (up to 10% of total pts)
+
+🔁 Fusion & Refining
+!fusegem / !fg – Merge 2 gems (1m cd)
+!refine <gem> <frag> – Boost purity (60s cd)
+!editgem <gem> – Randomly change frag makeup (15s cd)
+
+🎓 Specialization
+!specs – Check frag mastery (XP = better purity)
+
+⛏️ Gear & Upgrades
+!buyaxe – +10 boosted mines
+!buyglove – Halve mine cd to 30s
+!buybag – +10 frag slots
+!buygembag – +1 gem slot
+!buysynth – Reduce !synth cd to 30s
+!buyref – Reduce !refine cd to 30s
+!minebuff – Check all gear/boosts
+
+🤖 Auto Miners
+!buyminer1 / 3 / 5 / 7 / 9 – Auto-miners
+Generate stones passively for 1 hour
+Each tier = more stones/min
+
+🏆 Leaderboards
+!topgems – Highest purity gems
+!topsynth – Best synths
+!toprefine – Top refiners
+!topfuse – Best fusions
+!ta <achievement> – Top 10 by title
+!toptraders / !tt – Most gem sales
+
+🧠 Tips
+• Repeating stones = more purity
+• Master stones with !synth
+• Fusing similar gems is powerful
+• Use !inspect before refining
+• Miners + gloves = idle efficiency
+
+✨ New: Gem Infusion (!usegem / !ug)
+Sacrifice 80%+ purity gem → Boost XP of used frags
+XP = purity × 1.5 — 5 min cd
+
+⚡ New: Gem Charging (!chargegem / !cg)
+Use 100+ frags to boost gem purity
+Matching frags = +3.3% purity (chance to destroy gem!)
+    </pre>
+  </div>
+</div>
+
+</body>
+</html>
