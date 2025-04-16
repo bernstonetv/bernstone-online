@@ -408,26 +408,29 @@ Welcome to the Gem Mining Game! Collect stones, create powerful gems, and climb 
 
 <span class="cmd">!inspect</span> <gem>
 > Shows stones used to create your gem.
-> Example: <span class="cmd">!inspect Crystalite</span>
-> You can inspect others too: <span class="cmd">!inspect @user Crystalite</span>
+> Example: <span class="cmd">!inspect Alruziium</span>
+> You can inspect others too: <span class="cmd">!inspect @user Alruziium</span>
 
 <span class="cmd">!dismantle</span> <gem>
 > Break a gem down and reclaim some of its original stones.
+> Example: <span class="cmd">!dismantle Alruziium</span>
 
 <span class="cmd">!sellgem</span> <gem> or <span class="cmd">!sg</span> <gem>
 > Sell your gem for points.
+> Example: <span class="cmd">!sellgem Alruziium</span>
 > Payout is exponential based on purity.
 > 100% purity = 10% of total points in the system.
 
-🔁 Fusion & Refining
 <span class="cmd">!fusegem</span> <gem1> <gem2> or <span class="cmd">!fg</span>
 > Combine 2 gems into a new fused gem.
+> Example: <span class="cmd">!fusegem Alruziium Cizigaar</span>
 > Purity averages with bonus for overlapping stones.
 > Only similar gems will create strong results.
 > Cooldown: 60s
 
 <span class="cmd">!refine</span> <gem> <frag>
 > Try to increase a gem’s purity using a frag.
+> Example: <span class="cmd">!refine Alruziium Zircon</span>
 > Matching stone = higher success chance.
 > Success: +0.1% to +1.5%
 > Failure: -0.1% to -1%
@@ -435,10 +438,24 @@ Welcome to the Gem Mining Game! Collect stones, create powerful gems, and climb 
 
 <span class="cmd">!editgem</span> <gem name>
 > Randomly modifies a gem’s fragments.
+> Example: <span class="cmd">!editgem Alruziium</span>
 > Actions: add, remove, or replace a fragment.
 > Uses frags from your bag (add/replace).
 > Costs 0.05% of total points.
 > Cooldown: 15s
+
+<span class="cmd">!usegem</span> / <span class="cmd">!ug</span> <gem>
+> Consume high-purity gem for XP. Requires a gem with 80% purity or higher
+> Example: <span class="cmd">!usegem Alruziium</span>
+> XP = purity × 1.5 to each frag used. 
+> Cooldown: 5m
+
+<span class="cmd">!chargegem</span> / <span class="cmd">!cg</span> <gem>
+> Uses a number of random fragments equal to the gem’s size
+> Requires at least 100 fragments in your bag
+> Example: <span class="cmd">!chargegem Alruziium</span>
+> Match = +3.3/gem size %. Fail = gem destroyed.
+> Cooldown: 1m
 
 🎓 Stone Specialization
 <span class="cmd">!specs</span> or <span class="cmd">!specs @user</span>
@@ -495,16 +512,6 @@ Buy automated miners that generate stones passively every 60s for 1 hour!
 • Fusing similar gems = stronger results.
 • Miners + pickaxe + gloves = max idle gain.
 • Only 1 miner can be active at a time — extend it, don’t replace!
-
-✨ Gem Infusion
-<span class="cmd">!usegem</span> / <span class="cmd">!ug</span> <gem>
-> Consume high-purity gem for XP.
-> XP = purity × 1.5 to each frag used. CD: 5m.
-
-⚡ Gem Charging
-<span class="cmd">!chargegem</span> / <span class="cmd">!cg</span> <gem>
-> Uses 100+ frags to try to boost purity.
-> Match = +3.3/gem size %. Fail = gem destroyed. CD: 1m
     </pre>
 
   </div>
